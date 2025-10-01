@@ -68,6 +68,9 @@ const BLOG = {
 
   // uuid重定向至 slug
   UUID_REDIRECT: process.env.UUID_REDIRECT || false
+    
+  // 锁定默认主题为gitbook
+  THEME: process.env.NEXT_PUBLIC_THEME || 'gitbook',
 }
 
 module.exports = BLOG
