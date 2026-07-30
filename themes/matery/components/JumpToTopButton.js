@@ -22,7 +22,7 @@ const JumpToTopButton = ({ showPercent = true, percent }) => {
       data-aos='fade-left'
       data-aos-duration='300'
       data-aos-anchor-placement='top-center'
-      className='flex justify-center items-center text-center'
+      className='flex justify-center items-center text-center select-none'
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
       <i
         id='jumpToTopButton'

@@ -22,7 +22,7 @@ export default function FloatDarkModeButton() {
 
   return (
     <div
-      className='flex justify-center items-center text-center'
+      className='flex justify-center items-center text-center select-none'
       onClick={handleChangeDarkMode}>
       <i
         id='darkModeButton'
