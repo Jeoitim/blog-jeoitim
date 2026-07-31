@@ -214,14 +214,14 @@ const ShareButtons = ({ post }) => {
             return (
               <button
                 key={singleService}
-                className='cursor-pointer bg-blue-600 text-white rounded-full mx-1'
+                className={`${BASE_BUTTON_CLASS} bg-blue-600`}
                 title={singleService}>
                 <a
                   target='_blank'
                   rel='noreferrer'
                   aria-label='Share by QQ'
                   href={`http://connect.qq.com/widget/shareqq/index.html?url=${shareUrl}&sharesource=qzone&title=${title}&desc=${body}`}>
-                  <i className='fab fa-qq w-8' />
+                  <i className='fab fa-qq text-sm' />
                 </a>
               </button>
             )
@@ -232,10 +232,10 @@ const ShareButtons = ({ post }) => {
                 onMouseLeave={closePopover}
                 aria-label={singleService}
                 key={singleService}
-                className='cursor-pointer bg-green-600 text-white rounded-full mx-1'
+                className={`${BASE_BUTTON_CLASS} bg-green-600`}
                 title={singleService}>
                 <div id='wechat-button'>
-                  <i className='fab fa-weixin w-8' />
+                  <i className='fab fa-weixin text-sm' />
                 </div>
                 <div className='absolute'>
                   <div
@@ -259,10 +259,10 @@ const ShareButtons = ({ post }) => {
               <button
                 aria-label={singleService}
                 key={singleService}
-                className='cursor-pointer bg-yellow-500 text-white rounded-full mx-1'
+                className={`${BASE_BUTTON_CLASS} bg-yellow-500`}
                 title={singleService}>
                 <div alt={locale.COMMON.URL_COPIED} onClick={copyUrl}>
-                  <i className='fas fa-link w-8' />
+                  <i className='fas fa-link text-sm' />
                 </div>
               </button>
             )
@@ -274,8 +274,9 @@ const ShareButtons = ({ post }) => {
                 onClick={() => openRedirectShare('https://link.csdn.net/?target=')}
                 className='cursor-pointer rounded-full mx-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500'
                 title={singleService}>
-                <div className='w-8 h-8 rounded-full items-center justify-center'
-                  style={{backgroundColor: '#ff6a00'}}>
+                <div
+                  className='w-8 h-8 rounded-full flex items-center justify-center'
+                  style={{ backgroundColor: '#ff6a00' }}>
                   <Image
                     src='/svg/csdn.svg'
                     alt='CSDN'
@@ -283,7 +284,6 @@ const ShareButtons = ({ post }) => {
                     height={28}
                     className='w-5 h-5'
                     loading='lazy'
-                    style={{ transform: 'translateY(3px)' }}
                   />
                 </div>
               </button>
@@ -295,9 +295,10 @@ const ShareButtons = ({ post }) => {
                 key={singleService}
                 onClick={() => openRedirectShare('https://link.juejin.cn/?target=')}
                 className='cursor-pointer rounded-full mx-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500'
-                title={singleService}>  
-                <div className='w-8 h-8 rounded-full flex items-center justify-center'
-                     style={{ backgroundColor: '#5dade2' }}>
+                title={singleService}>
+                <div
+                  className='w-8 h-8 rounded-full flex items-center justify-center'
+                  style={{ backgroundColor: '#5dade2' }}>
                   <Image
                     src='/svg/juejin.svg'
                     alt='掘金'
